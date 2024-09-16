@@ -1,0 +1,279 @@
+/* Custom CSS */
+
+:root {
+    --color1 : white;
+    --color2 :black;
+    --color3: #b25f49;
+    --color4 : #887874;
+    --color5: #fcf8f5;
+}
+
+/* font-face */
+@font-face {
+    font-family: "customFont";
+    src : url('./assets/fonts/RedHatText-VariableFont_wght.ttf')
+}
+
+body{
+    background-color:  #fcf8f5 !important;
+    min-height:  100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'customFont' , sans-serif  !important;
+}
+
+.wrapContent{
+    margin-top: 100px;
+}
+
+
+.dessertList {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  gap: 20px;
+
+}
+
+.dessertList img {
+  width: 100%;
+  height: 280px;
+  border-radius: 5px;
+
+}
+
+.dessertItem{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.dessertItem  i {
+    font-size: 18px;
+    color : var(--color3);
+}
+
+.dessertItem{
+    position: relative;
+}
+
+.dessertItemInfo{
+    margin-top: 20px;
+}
+
+.btnCustom {
+    border-radius: 32px;
+    /* padding : 6px 18px; */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4px;
+    min-width:130px ;
+    height: 40px;
+}
+
+
+.btnAddToCart{
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%) ;
+    border: 1px solid var(--color3);
+    background-color: var(--color1) ;
+
+}
+
+.btnAddToCart:hover {
+    color : var(--color3) ;
+}
+
+.btnUpdate{
+    justify-content: space-between;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    color : var(--color1) ;
+    transform: translateX(-50%) ;
+    border: 1px solid var(--color3);
+    background-color: var(--color3) ;
+    display: none;
+}
+
+.btn i{
+    color : var(--color1) !important;
+}
+
+
+
+.itemCate {
+    color : #887874;
+    font-size: 14px;
+}
+
+.itemTitle{
+    margin-bottom: 0;
+}
+
+.itemPrice{
+    color : var(--color3);
+    font-weight: bold;
+}
+
+/* cart */
+
+.wrapContainercart {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 3px;
+}
+
+.contentCart {
+    padding : 20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contentCart h3 {
+    color : var(--color3);
+    font-weight: bold;
+}
+
+.cartList{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.cartListItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.cartItemInfo{
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+.cartItemTitle{
+    font-weight: 500;
+
+}
+
+.cartItemQty{
+    color : var(--color3);
+    font-weight: 500;
+}
+
+.cartItemPrice{
+    color : var(--color4);
+
+}
+
+.cartItemTotal {
+   color : #675651;
+   font-weight: 500;
+}
+
+
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.cartText{
+    background-color: #fcf8f5  !important;
+    text-align: center;
+    padding : 5px 10px;
+}
+
+.btnCheckout{
+    background-color: var(--color3) ;
+    color : var(--color1);
+    border: none;
+    cursor: pointer;
+    padding : 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.totalCart{
+    display: none;
+}
+
+/* modal */
+
+.wrapModalContent {
+    padding : 20px;
+}
+
+.wrapModalContent i{
+    font-size: 32px;
+    color : green;
+}
+
+.modalTitle h3 {
+    font-weight: bold;
+}
+
+.modalTitle span {
+    font-size: 14px;
+    color : var(--color4);
+   
+}
+.modalTitle {
+    padding-bottom:20px ;
+}
+
+.modalItem img {
+    width: 42px;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.modalContent{
+    padding : 20px;
+    background-color: var(--color5);
+}
+
+.modalItem {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom:  1px solid #ccc;
+    align-items: center;
+
+}
+
+/* responsive  */
+
+@media screen and (max-width: 768px) {
+    .wrapContent .row {
+        flex-direction: column;
+    }
+    .dessertList {
+        grid-template-columns : auto;
+    }
+
+    .wrapContent .row .col-3 {
+        width: 100% ;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .wrapContent .row {
+        flex-direction: row;
+    }
+
+}
